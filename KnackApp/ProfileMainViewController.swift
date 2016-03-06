@@ -11,14 +11,14 @@ import UIKit
 
 var openWorkshop = true
 
-class ProfileMainViewController: UIViewController, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ProfileMainViewController: UIViewController, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate {
     
     @IBOutlet weak var photoImageView: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var email: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+//    @IBOutlet weak var tableView: UITableView!
     
     let transitionManager = TransitionManager()
     
@@ -45,7 +45,7 @@ class ProfileMainViewController: UIViewController, UITableViewDelegate, UIImageP
                     self.nameLabel.text = currentUser.name
                     self.email.text = currentUser.contact
                     self.addressLabel.text = currentUser.location
-                    self.tableView.reloadData()
+//                    self.tableView.reloadData()
                 })
             }
             dataManager.createBadgeDB()
@@ -154,6 +154,41 @@ class ProfileMainViewController: UIViewController, UITableViewDelegate, UIImageP
         
     }
     
+    //-------Badges Collection -------
+    
+    func numberOfSectionsInCollectionView(collectionView:
+        UICollectionView!) -> Int {
+            return 1
+    }
+    func collectionView(collectionView: UICollectionView!,
+        numberOfItemsInSection section: Int) -> Int {
+            return currentUser.badges.count
+    }
+    
+    func collectionView(collectionView: UICollectionView!,
+        cellForItemAtIndexPath indexPath: NSIndexPath!) ->
+        UICollectionViewCell! {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier,
+                forIndexPath: indexPath) as! BadgeCollectionViewCell
+            //cell.backgroundColor = UIColor.redColor()
+            
+            // Configure the cell
+            let badgeImg = badgeRepository[currentUser.badges[indexPath.row]]!.img
+            
+            cell.badgeImg.image = UIImage(named: badgeImg)
+            return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let activityView = sb.instantiateViewControllerWithIdentifier("badge detail")
+            as! BadgeViewController
+        let badgeItem = badgeRepository[currentUser.badges[indexPath.row]]!
+        
+        activityView.badgeInfo = badge(inputImg: badgeItem.img, inputName: badgeItem.name, inputDescription: badgeItem.description)
+        activityView.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
+        self.presentViewController(activityView, animated: true, completion: nil)
+    }
     
     //-------Defaults-----------
     

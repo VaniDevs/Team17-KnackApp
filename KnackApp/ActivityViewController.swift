@@ -24,7 +24,7 @@ class ActivityViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     @IBAction func onRegister(sender: AnyObject) {
-        print("Registered")
+        showAlert("Registered")
     }
     
     override func viewDidLoad() {
@@ -45,6 +45,14 @@ class ActivityViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func showAlert(let msg:String){
+        let alert = UIAlertController(title: "Hurray!!", message: msg , preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (alertEvent) -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }))
+        presentViewController(alert, animated: true, completion: nil)
     }
 
     /*

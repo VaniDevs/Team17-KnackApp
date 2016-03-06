@@ -14,6 +14,7 @@
 		9C58A7031C8C92DC0099ACCF /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58A7021C8C92DC0099ACCF /* TaskViewController.swift */; };
 		9C58A7051C8CA0060099ACCF /* BadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58A7041C8CA0060099ACCF /* BadgeViewController.swift */; };
 		9C58A7081C8CAAA80099ACCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C58A7071C8CAAA80099ACCF /* Assets.xcassets */; };
+		9C58A70A1C8CC77B0099ACCF /* BadgeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58A7091C8CC77B0099ACCF /* BadgeCollectionViewCell.swift */; };
 		9CB8D6121C8B6BD6007F39D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D6111C8B6BD6007F39D4 /* AppDelegate.swift */; };
 		9CB8D6141C8B6BD6007F39D4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D6131C8B6BD6007F39D4 /* ListViewController.swift */; };
 		9CB8D6171C8B6BD6007F39D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D6151C8B6BD6007F39D4 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		9C58A7021C8C92DC0099ACCF /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		9C58A7041C8CA0060099ACCF /* BadgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeViewController.swift; sourceTree = "<group>"; };
 		9C58A7071C8CAAA80099ACCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C58A7091C8CC77B0099ACCF /* BadgeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeCollectionViewCell.swift; sourceTree = "<group>"; };
 		9CB8D60E1C8B6BD6007F39D4 /* KnackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB8D6111C8B6BD6007F39D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CB8D6131C8B6BD6007F39D4 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		9C58A7061C8CA01C0099ACCF /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				9C58A7091C8CC77B0099ACCF /* BadgeCollectionViewCell.swift */,
 				9C58A6FA1C8C226B0099ACCF /* DataManager.swift */,
 				9CB8D6331C8BE99D007F39D4 /* TransitionManager.swift */,
 			);
@@ -204,6 +207,7 @@
 				9C58A6F91C8C15C90099ACCF /* ProfileViewController.swift in Sources */,
 				9C58A7031C8C92DC0099ACCF /* TaskViewController.swift in Sources */,
 				9C58A6FB1C8C226B0099ACCF /* DataManager.swift in Sources */,
+				9C58A70A1C8CC77B0099ACCF /* BadgeCollectionViewCell.swift in Sources */,
 				9CB8D6121C8B6BD6007F39D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

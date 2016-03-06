@@ -138,8 +138,8 @@ class Activity: NSObject {
 class DataManager: NSObject {
     
     var initialized = false
-//    var URL_BASE = "https://quiet-temple-44406.herokuapp.com/"
-    var URL_BASE = "http://localhost:5000/"
+    var URL_BASE = "https://quiet-temple-44406.herokuapp.com/"
+//    var URL_BASE = "http://localhost:5000/"
     
     func loadEarnerInfo(callback: (()->Void)? ){
         print("Loading user info...")

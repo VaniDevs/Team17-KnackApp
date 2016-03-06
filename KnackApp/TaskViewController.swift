@@ -22,7 +22,7 @@ class TaskViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     @IBAction func onApply(sender: AnyObject) {
-        print("Applied")
+        showAlert("Thanks for applying!")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +77,12 @@ class TaskViewController: UIViewController {
         
     }
     
-    
+    func showAlert(let msg:String){
+        let alert = UIAlertController(title: "Hurray!!", message: msg , preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (alertEvent) -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }))
+        presentViewController(alert, animated: true, completion: nil)
+    }
 
 }
