@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2yx-O3-nAo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2yx-O3-nAo">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--profileTest-->
         <scene sceneID="eZk-2X-6Bp">
             <objects>
-                <viewController id="2yx-O3-nAo" customClass="ProfileViewController" customModule="KnackApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="profileTest" id="2yx-O3-nAo" customClass="ProfileViewController" customModule="KnackApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BvL-CZ-ANn"/>
                         <viewControllerLayoutGuide type="bottom" id="cD7-iX-TOO"/>
@@ -42,6 +42,45 @@
                                     <outletCollection property="gestureRecognizers" destination="p7k-d3-u9z" appends="YES" id="igG-5d-C4h"/>
                                 </connections>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cbc-G9-7Bz">
+                                <rect key="frame" x="20" y="362" width="335" height="269"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="BQU-qw-y0u">
+                                    <size key="itemSize" width="76" height="76"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="badgeCell" id="lVA-Wj-0An" customClass="BadgeCollectionViewCell" customModule="KnackApp">
+                                        <rect key="frame" x="5" y="5" width="76" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="76" height="76"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tJ0-Jq-q2J">
+                                                    <rect key="frame" x="0.0" y="0.0" width="86" height="84"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="tJ0-Jq-q2J" firstAttribute="top" secondItem="lVA-Wj-0An" secondAttribute="top" id="Noy-N0-8Ag"/>
+                                            <constraint firstItem="tJ0-Jq-q2J" firstAttribute="leading" secondItem="lVA-Wj-0An" secondAttribute="leading" id="SNx-xp-hP8"/>
+                                            <constraint firstAttribute="trailing" secondItem="tJ0-Jq-q2J" secondAttribute="trailing" id="Wpx-FH-dZp"/>
+                                            <constraint firstAttribute="bottom" secondItem="tJ0-Jq-q2J" secondAttribute="bottom" id="mma-BT-U3S"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="badgeImg" destination="tJ0-Jq-q2J" id="1rU-Vv-Z9D"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2yx-O3-nAo" id="oTB-a6-QsQ"/>
+                                    <outlet property="delegate" destination="2yx-O3-nAo" id="VZj-wS-zpM"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.24214544837958771" green="0.65009407722513091" blue="0.27400415642983228" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
