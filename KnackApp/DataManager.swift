@@ -17,10 +17,18 @@ let dataManager = DataManager()
 struct badge {
     var img: String
     var name: String
+    var description: String
     
-    init(inputImg: String, inputName: String){
+    init(){
+        img = ""
+        name = ""
+        description = ""
+    }
+    
+    init(inputImg: String, inputName: String, inputDescription: String){
         img = inputImg
         name = inputName
+        description = inputDescription
         
     }
 }
@@ -130,10 +138,12 @@ class Activity: NSObject {
 class DataManager: NSObject {
     
     var initialized = false
+//    var URL_BASE = "https://quiet-temple-44406.herokuapp.com/"
+    var URL_BASE = "http://localhost:5000/"
     
     func loadEarnerInfo(callback: (()->Void)? ){
         print("Loading user info...")
-        let url = NSURL(string: "https://quiet-temple-44406.herokuapp.com/earners")!
+        let url = NSURL(string: URL_BASE + "earners")!
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
             if let urlContent = data {
@@ -162,7 +172,7 @@ class DataManager: NSObject {
     
     func createBadgeDB(){
         print("Creating badge repo...")
-        let url = NSURL(string: "https://quiet-temple-44406.herokuapp.com/badges")!
+        let url = NSURL(string: URL_BASE + "badges")!
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
             if let urlContent = data {
@@ -170,7 +180,7 @@ class DataManager: NSObject {
                     let jsonResult = try NSJSONSerialization.JSONObjectWithData(urlContent, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                     if let badgesArray = jsonResult["badges"] as! NSArray? {
                         for item in badgesArray{
-                            badgeRepository[item["id"] as! Int] = badge(inputImg: item["img"] as! String, inputName: item["name"] as! String)
+                            badgeRepository[item["id"] as! Int] = badge(inputImg: item["img"] as! String, inputName: item["name"] as! String, inputDescription: item["description"] as! String )
                         }
                         
                     }
@@ -189,7 +199,7 @@ class DataManager: NSObject {
     
     func createActivities(){
         print("Creating activities...")
-        let url = NSURL(string: "https://quiet-temple-44406.herokuapp.com/activities")!
+        let url = NSURL(string: URL_BASE + "activities")!
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
             if let urlContent = data {

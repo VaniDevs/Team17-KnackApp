@@ -126,7 +126,6 @@ class ProfileMainViewController: UIViewController, UITableViewDelegate, UIImageP
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return currentUser.badges.count
     }
     
@@ -134,26 +133,26 @@ class ProfileMainViewController: UIViewController, UITableViewDelegate, UIImageP
         
         let cell = tableView.dequeueReusableCellWithIdentifier("badgeCell", forIndexPath: indexPath) as! BadgeTableViewCell
         
-        
-        // TODO: Map images
-        cell.badgeImg.image = UIImage(named: "ss_badge1")
+        let badgeImg = badgeRepository[currentUser.badges[indexPath.row]]!.img
+
+        cell.badgeImg.image = UIImage(named: badgeImg)
         
         return cell
     }
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let activityView = sb.instantiateViewControllerWithIdentifier("activity")
-//            as! ActivityViewController
-//        
-//        activityView.activity = activityList.workshop[indexPath.row]
-//        
-//        activityView.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
-//        self.presentViewController(activityView, animated: true, completion: nil)
-//        
-//        
-//    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let activityView = sb.instantiateViewControllerWithIdentifier("badge detail")
+            as! BadgeViewController
+        let badgeItem = badgeRepository[currentUser.badges[indexPath.row]]!
+        
+        activityView.badgeInfo = badge(inputImg: badgeItem.img, inputName: badgeItem.name, inputDescription: badgeItem.description)
+        activityView.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
+        self.presentViewController(activityView, animated: true, completion: nil)
+        
+        
+    }
     
     
     //-------Defaults-----------

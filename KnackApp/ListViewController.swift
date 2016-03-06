@@ -75,7 +75,7 @@ class ListViewController: UIViewController, UITableViewDelegate {
         }
         
         // TODO: Map images
-        cell.orgIcon.image = UIImage(named: "mc")
+        cell.orgIcon.image = UIImage(named: activityList.tasks[indexPath.row].employer)
         
         return cell
     }
@@ -83,15 +83,18 @@ class ListViewController: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let activityView = sb.instantiateViewControllerWithIdentifier("activity")
-        as! ActivityViewController
         
-        activityView.activity = activityList.workshop[indexPath.row]
-        
-        activityView.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
-        self.presentViewController(activityView, animated: true, completion: nil)
-        
-        
+        if openWorkshop {
+            let activityView = sb.instantiateViewControllerWithIdentifier("workshop detail") as! ActivityViewController
+            activityView.activity = activityList.workshop[indexPath.row]
+            activityView.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
+            self.presentViewController(activityView, animated: true, completion: nil)
+        } else {
+            let activityView = sb.instantiateViewControllerWithIdentifier("task detail") as! TaskViewController
+            activityView.activity = activityList.tasks[indexPath.row]
+            activityView.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
+            self.presentViewController(activityView, animated: true, completion: nil)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

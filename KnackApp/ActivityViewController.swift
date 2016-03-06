@@ -14,11 +14,17 @@ class ActivityViewController: UIViewController {
     @IBOutlet weak var activityName: UILabel!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var earnedBadge: UIImageView!
+    @IBOutlet weak var activity_desc: UILabel!
+    @IBOutlet weak var contactInfo: UILabel!
     
     var activity:Activity = Activity()
     
     @IBAction func closeWindow(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    @IBAction func onRegister(sender: AnyObject) {
+        print("Registered")
     }
     
     override func viewDidLoad() {
@@ -27,10 +33,13 @@ class ActivityViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        orgIcon.image = UIImage(named: "mc")
+        orgIcon.image = UIImage(named: activity.employer)
         activityName.text = activity.name
         location.text = activity.location
         date.text = activity.timeStamp
+        activity_desc.text = activity.activity_desc
+        earnedBadge.image = UIImage(named: "ss_badge1")
+        contactInfo.text = "Contact: "+activity.contact
     }
 
     override func didReceiveMemoryWarning() {
