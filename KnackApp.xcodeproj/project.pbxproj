@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C58A6F81C8C15C90099ACCF /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C58A6F51C8C15C90099ACCF /* ProfileStoryboard.storyboard */; };
+		9C58A6F91C8C15C90099ACCF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58A6F61C8C15C90099ACCF /* ProfileViewController.swift */; };
+		9C58A6FB1C8C226B0099ACCF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58A6FA1C8C226B0099ACCF /* DataManager.swift */; };
+		9C58A7001C8C430B0099ACCF /* BadgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C58A6FF1C8C430B0099ACCF /* BadgeTableViewCell.swift */; };
 		9CB8D6121C8B6BD6007F39D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D6111C8B6BD6007F39D4 /* AppDelegate.swift */; };
 		9CB8D6141C8B6BD6007F39D4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D6131C8B6BD6007F39D4 /* ListViewController.swift */; };
 		9CB8D6171C8B6BD6007F39D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D6151C8B6BD6007F39D4 /* Main.storyboard */; };
 		9CB8D6191C8B6BD6007F39D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D6181C8B6BD6007F39D4 /* Assets.xcassets */; };
 		9CB8D61C1C8B6BD6007F39D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D61A1C8B6BD6007F39D4 /* LaunchScreen.storyboard */; };
 		9CB8D6261C8B9368007F39D4 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D6251C8B9368007F39D4 /* test.storyboard */; };
-		9CB8D62B1C8BBD13007F39D4 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D6291C8BBD13007F39D4 /* ActivityTableViewCell.swift */; };
-		9CB8D62C1C8BBD13007F39D4 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D62A1C8BBD13007F39D4 /* ActivityTableViewCell.xib */; };
-		9CB8D62E1C8BCEA9007F39D4 /* slack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D62D1C8BCEA9007F39D4 /* slack.jpg */; };
 		9CB8D6301C8BD92A007F39D4 /* ProfileMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D62F1C8BD92A007F39D4 /* ProfileMainViewController.swift */; };
 		9CB8D6341C8BE99D007F39D4 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D6331C8BE99D007F39D4 /* TransitionManager.swift */; };
 		9CB8D6361C8BFE09007F39D4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D6351C8BFE09007F39D4 /* TableViewCell.swift */; };
@@ -23,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C58A6F51C8C15C90099ACCF /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		9C58A6F61C8C15C90099ACCF /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9C58A6FA1C8C226B0099ACCF /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		9C58A6FF1C8C430B0099ACCF /* BadgeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeTableViewCell.swift; sourceTree = "<group>"; };
 		9CB8D60E1C8B6BD6007F39D4 /* KnackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB8D6111C8B6BD6007F39D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CB8D6131C8B6BD6007F39D4 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -31,9 +36,6 @@
 		9CB8D61B1C8B6BD6007F39D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CB8D61D1C8B6BD6007F39D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB8D6251C8B9368007F39D4 /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
-		9CB8D6291C8BBD13007F39D4 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
-		9CB8D62A1C8BBD13007F39D4 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
-		9CB8D62D1C8BCEA9007F39D4 /* slack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = slack.jpg; path = ../../../../../../Desktop/slack.jpg; sourceTree = "<group>"; };
 		9CB8D62F1C8BD92A007F39D4 /* ProfileMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMainViewController.swift; sourceTree = "<group>"; };
 		9CB8D6331C8BE99D007F39D4 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		9CB8D6351C8BFE09007F39D4 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -51,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C58A6FC1C8C427B0099ACCF /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				9CB8D6351C8BFE09007F39D4 /* TableViewCell.swift */,
+				9C58A6FF1C8C430B0099ACCF /* BadgeTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
 		9CB8D6051C8B6BD6007F39D4 = {
 			isa = PBXGroup;
 			children = (
@@ -70,20 +81,20 @@
 		9CB8D6101C8B6BD6007F39D4 /* KnackApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C58A6FC1C8C427B0099ACCF /* TableViewCells */,
+				9C58A6F51C8C15C90099ACCF /* ProfileStoryboard.storyboard */,
+				9C58A6F61C8C15C90099ACCF /* ProfileViewController.swift */,
 				9CB8D6111C8B6BD6007F39D4 /* AppDelegate.swift */,
 				9CB8D6131C8B6BD6007F39D4 /* ListViewController.swift */,
 				9CB8D6151C8B6BD6007F39D4 /* Main.storyboard */,
+				9C58A6FA1C8C226B0099ACCF /* DataManager.swift */,
 				9CB8D6371C8C0A30007F39D4 /* ActivityViewController.swift */,
-				9CB8D6351C8BFE09007F39D4 /* TableViewCell.swift */,
 				9CB8D6331C8BE99D007F39D4 /* TransitionManager.swift */,
 				9CB8D62F1C8BD92A007F39D4 /* ProfileMainViewController.swift */,
-				9CB8D6291C8BBD13007F39D4 /* ActivityTableViewCell.swift */,
-				9CB8D62A1C8BBD13007F39D4 /* ActivityTableViewCell.xib */,
 				9CB8D6251C8B9368007F39D4 /* test.storyboard */,
 				9CB8D6181C8B6BD6007F39D4 /* Assets.xcassets */,
 				9CB8D61A1C8B6BD6007F39D4 /* LaunchScreen.storyboard */,
 				9CB8D61D1C8B6BD6007F39D4 /* Info.plist */,
-				9CB8D62D1C8BCEA9007F39D4 /* slack.jpg */,
 			);
 			path = KnackApp;
 			sourceTree = "<group>";
@@ -148,9 +159,8 @@
 			files = (
 				9CB8D61C1C8B6BD6007F39D4 /* LaunchScreen.storyboard in Resources */,
 				9CB8D6191C8B6BD6007F39D4 /* Assets.xcassets in Resources */,
-				9CB8D62C1C8BBD13007F39D4 /* ActivityTableViewCell.xib in Resources */,
+				9C58A6F81C8C15C90099ACCF /* ProfileStoryboard.storyboard in Resources */,
 				9CB8D6261C8B9368007F39D4 /* test.storyboard in Resources */,
-				9CB8D62E1C8BCEA9007F39D4 /* slack.jpg in Resources */,
 				9CB8D6171C8B6BD6007F39D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,9 +176,11 @@
 				9CB8D6141C8B6BD6007F39D4 /* ListViewController.swift in Sources */,
 				9CB8D6301C8BD92A007F39D4 /* ProfileMainViewController.swift in Sources */,
 				9CB8D6361C8BFE09007F39D4 /* TableViewCell.swift in Sources */,
+				9C58A7001C8C430B0099ACCF /* BadgeTableViewCell.swift in Sources */,
 				9CB8D6381C8C0A30007F39D4 /* ActivityViewController.swift in Sources */,
+				9C58A6F91C8C15C90099ACCF /* ProfileViewController.swift in Sources */,
+				9C58A6FB1C8C226B0099ACCF /* DataManager.swift in Sources */,
 				9CB8D6121C8B6BD6007F39D4 /* AppDelegate.swift in Sources */,
-				9CB8D62B1C8BBD13007F39D4 /* ActivityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

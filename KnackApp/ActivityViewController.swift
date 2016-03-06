@@ -9,7 +9,13 @@
 import UIKit
 
 class ActivityViewController: UIViewController {
-    var test : String?
+    
+    @IBOutlet weak var orgIcon: UIImageView!
+    @IBOutlet weak var activityName: UILabel!
+    @IBOutlet weak var location: UILabel!
+    @IBOutlet weak var date: UILabel!
+    
+    var activity:Activity = Activity()
     
     @IBAction func closeWindow(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -17,15 +23,20 @@ class ActivityViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        orgIcon.image = UIImage(named: "mc")
+        activityName.text = activity.name
+        location.text = activity.location
+        date.text = activity.timeStamp
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

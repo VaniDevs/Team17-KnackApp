@@ -11,9 +11,9 @@ import UIKit
 var id1:Int = 1
 var id2:Int = 2
 var id3:Int = 3
-let photo1 = UIImage(named: "ss_badge1")!
-let photo2 = UIImage(named: "hs_badge2")!
-let photo3 = UIImage(named: "hs_badge3")!
+let photo1 = "ss_badge1"
+let photo2 = "hs_badge2"
+let photo3 = "hs_badge3"
 
 struct profile {
 
@@ -34,7 +34,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     // MARK: Properties
     
     @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var badgeImageView: UIImageView!
     var photosOfBadges = [UIImage]()
     var listOfBadges = [person.badges]
  
@@ -43,14 +42,9 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         super.viewDidLoad()
         
         //load badges
-        loadBadges()
+//        loadBadges()
         
      
-    }
-    
-    func loadBadges() {
-        // load list of badges
-        listOfBadges = [person.badges]
     }
     
     
@@ -72,15 +66,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    // MARK: Actions
-    @IBAction func backButton(sender: UIBarButtonItem) {
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
-    }
-    
 
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
-        // Hide the keyboard.
-        nameTextField.resignFirstResponder()
         
         // UIImagePickerController is a view controller that lets a user pick media from their photo library.
         let imagePickerController = UIImagePickerController()
@@ -119,11 +106,11 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
             
             // Fetches the appropriate meal for the data source layout.
             let badge = listOfBadges[indexPath.row]
+//            cell.imageView?.image = UIImage(named: badgeStore[badge])
             
-            
-            for value in badge.values {
-                cell.imageView?.image = value
-            }
+//            for value in badge.values {
+//                cell.imageView?.image = value
+//            }
             
             return cell
         }

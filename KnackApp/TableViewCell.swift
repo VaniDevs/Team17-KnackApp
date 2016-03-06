@@ -14,6 +14,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var orgName: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var orgIcon: UIImageView!
+    @IBOutlet weak var timeStamp: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

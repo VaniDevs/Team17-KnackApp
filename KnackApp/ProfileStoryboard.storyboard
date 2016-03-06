@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2yx-O3-nAo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2yx-O3-nAo">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -17,43 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0K-K1-7hQ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="x6Q-Ng-EY8"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Profile" id="8gT-FX-7vm">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Skp-DB-MJU">
-                                            <connections>
-                                                <action selector="backButton:" destination="2yx-O3-nAo" id="clb-L2-pvi"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k5N-HJ-owS">
-                                <rect key="frame" x="0.0" y="371" width="375" height="296"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="103" id="m43-dQ-0qa" customClass="BadgeTableViewCell" customModule="KnackApp">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="103"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m43-dQ-0qa" id="VZB-d1-qaM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3qa-dP-cBd">
-                                                    <rect key="frame" x="140" y="8" width="94" height="86"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="badgeImageView" destination="3qa-dP-cBd" id="Bcf-eh-Pav"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEO-0H-iWi">
                                 <rect key="frame" x="105" y="230" width="165" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -81,20 +44,9 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.24214544837958771" green="0.65009407722513091" blue="0.27400415642983228" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="c0K-K1-7hQ" firstAttribute="centerX" secondItem="0MT-fx-AmQ" secondAttribute="centerX" id="ZMW-zT-dqf"/>
-                            <constraint firstItem="c0K-K1-7hQ" firstAttribute="top" secondItem="BvL-CZ-ANn" secondAttribute="bottom" id="ouA-Bk-oZh"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="c0K-K1-7hQ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="backButton" destination="Skp-DB-MJU" id="fDl-Wf-quO"/>
-                        <outlet property="badgeImageView" destination="3qa-dP-cBd" id="bx0-3H-9Ne"/>
                         <outlet property="photoImageView" destination="fFk-WH-Q0N" id="zTC-bT-0aw"/>
                     </connections>
                 </viewController>

@@ -2,18 +2,17 @@
 //  BadgeTableViewCell.swift
 //  KnackApp
 //
-//  Created by Joohan Oh on 2016-03-05.
+//  Created by Sebastian Valdivia on 2016-03-06.
 //  Copyright © 2016 Sebastian Valdivia. All rights reserved.
 //
 
 import UIKit
 
 class BadgeTableViewCell: UITableViewCell {
-    
-    // MARK: Properties
-    
-    @IBOutlet weak var badgeImageView: UIImageView!
 
+    @IBOutlet weak var badgeImg: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
