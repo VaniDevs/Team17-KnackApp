@@ -19,6 +19,7 @@ class ProfileMainViewController: UIViewController, UITableViewDelegate, UIImageP
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var email: UILabel!
 //    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     let transitionManager = TransitionManager()
     
@@ -45,16 +46,19 @@ class ProfileMainViewController: UIViewController, UITableViewDelegate, UIImageP
                     self.nameLabel.text = currentUser.name
                     self.email.text = currentUser.contact
                     self.addressLabel.text = currentUser.location
-//                    self.tableView.reloadData()
+                    self.collectionView.reloadData()
                 })
             }
-            dataManager.createBadgeDB()
+            dataManager.createBadgeDB({ () -> Void in
+                self.collectionView.reloadData()
+            })
             dataManager.createActivities()
             dataManager.initialized = true
         } else {
             self.nameLabel.text = currentUser.name
             self.email.text = currentUser.contact
             self.addressLabel.text = currentUser.location
+            self.collectionView.reloadData()
         }
         
     }
@@ -170,12 +174,12 @@ class ProfileMainViewController: UIViewController, UITableViewDelegate, UIImageP
         UICollectionViewCell! {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier,
                 forIndexPath: indexPath) as! BadgeCollectionViewCell
-            //cell.backgroundColor = UIColor.redColor()
             
             // Configure the cell
-            let badgeImg = badgeRepository[currentUser.badges[indexPath.row]]!.img
-            
-            cell.badgeImg.image = UIImage(named: badgeImg)
+            if badgeRepository.count > 0{
+                let badgeImg = badgeRepository[currentUser.badges[indexPath.row]]!.img
+                cell.badgeImg.image = UIImage(named: badgeImg)
+            }
             return cell
     }
     

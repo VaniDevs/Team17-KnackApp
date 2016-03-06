@@ -253,6 +253,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="addressLabel" destination="DVH-ul-aB1" id="V5P-mR-fZj"/>
+                        <outlet property="collectionView" destination="KW4-ek-1d8" id="ov5-ow-RRM"/>
                         <outlet property="email" destination="W0b-Ck-xYt" id="FVY-TJ-XfG"/>
                         <outlet property="nameLabel" destination="etz-u5-Uv3" id="Thw-D3-1x0"/>
                         <outlet property="photoImageView" destination="jYL-GA-nFV" id="byy-id-TCl"/>

@@ -170,7 +170,7 @@ class DataManager: NSObject {
         task.resume()
     }
     
-    func createBadgeDB(){
+    func createBadgeDB(callback: (()->Void)?){
         print("Creating badge repo...")
         let url = NSURL(string: URL_BASE + "badges")!
         
@@ -182,7 +182,7 @@ class DataManager: NSObject {
                         for item in badgesArray{
                             badgeRepository[item["id"] as! Int] = badge(inputImg: item["img"] as! String, inputName: item["name"] as! String, inputDescription: item["description"] as! String )
                         }
-                        
+                        callback!()
                     }
                     
                 }
