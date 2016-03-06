@@ -16,35 +16,56 @@ let photo2 = "hs_badge2"
 let photo3 = "hs_badge3"
 
 struct profile {
-
      var   name = "Andrew"
      var   address = "#109 Walter Gage Rd."
      var   email = "joohan0311@hotmail.com"
      var   badges = [id1, id3]
-	
 }
 
 var person = profile()
 
 
 var badgeStore = [id1:photo1, id2:photo2, id3:photo3]
+//ADD
+let reuseIdentifier = "badgeCell" // also enter this string as the cell identifier in the storyboard
 
-class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource,UITableViewDelegate {
+//ADD UICollectionViewDelegate
+class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate {
     
     // MARK: Properties
     
     @IBOutlet weak var photoImageView: UIImageView!
+    //ADD
+    //@IBOutlet weak var cellView: UICollectionView!
+    
+    
     var photosOfBadges = [UIImage]()
     var listOfBadges = [person.badges]
- 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //load badges
-//        loadBadges()
-        
-     
+        photosOfBadges = [
+            UIImage(named: "ss_badge1")!,
+            UIImage(named: "ss_badge2")!,
+            UIImage(named: "ss_badge3")!,
+            UIImage(named: "ss_badge4")!,
+            UIImage(named: "ss_badge5")!,
+            UIImage(named: "ss_badge6")!,
+            UIImage(named: "ss_badge1")!,
+            UIImage(named: "ss_badge2")!,
+            UIImage(named: "ss_badge3")!,
+            UIImage(named: "ss_badge4")!,
+            UIImage(named: "ss_badge5")!,
+            UIImage(named: "ss_badge6")!,
+            UIImage(named: "ss_badge1")!,
+            UIImage(named: "ss_badge2")!,
+            UIImage(named: "ss_badge3")!,
+            UIImage(named: "ss_badge4")!,
+            UIImage(named: "ss_badge5")!,
+            UIImage(named: "ss_badge6")!
+        ]
     }
     
     
@@ -81,38 +102,30 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         presentViewController(imagePickerController, animated: true, completion: nil)
     }
     
-    // MARK: TableViewController
+    //ADD
+    // MARK: CollectionViewCellController
         
         // MARK: properties
     
-    
-        
-        // MARK: - Table view data source
-        
-         func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-            // #warning Incomplete implementation, return the number of sections
+    func numberOfSectionsInCollectionView(collectionView:
+        UICollectionView!) -> Int {
             return 1
-        }
-        
-         func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            // #warning Incomplete implementation, return the number of rows
+    }
+    func collectionView(collectionView: UICollectionView!,
+        numberOfItemsInSection section: Int) -> Int {
             return photosOfBadges.count
-        }
-        
-        func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            // Table view cells are reused and should be dequeued using a cell identifier.
-            let cellIdentifier = "BadgeTableViewCell"
-            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! BadgeTableViewCell
+    }
+    
+    func collectionView(collectionView: UICollectionView!,
+        cellForItemAtIndexPath indexPath: NSIndexPath!) ->
+        UICollectionViewCell! {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier,
+            forIndexPath: indexPath) as! BadgeCollectionViewCell
+            //cell.backgroundColor = UIColor.redColor()
             
-            // Fetches the appropriate meal for the data source layout.
-            let badge = listOfBadges[indexPath.row]
-//            cell.imageView?.image = UIImage(named: badgeStore[badge])
-            
-//            for value in badge.values {
-//                cell.imageView?.image = value
-//            }
-            
+//          // Configure the cell
+            let image = photosOfBadges[indexPath.row]
+            cell.badgeImg.image = image
             return cell
-        }
-    //}
+    }
 }
