@@ -12,6 +12,10 @@
 		9CB8D6171C8B6BD6007F39D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D6151C8B6BD6007F39D4 /* Main.storyboard */; };
 		9CB8D6191C8B6BD6007F39D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D6181C8B6BD6007F39D4 /* Assets.xcassets */; };
 		9CB8D61C1C8B6BD6007F39D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D61A1C8B6BD6007F39D4 /* LaunchScreen.storyboard */; };
+		9CB8D6261C8B9368007F39D4 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D6251C8B9368007F39D4 /* test.storyboard */; };
+		9CB8D62B1C8BBD13007F39D4 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D6291C8BBD13007F39D4 /* ActivityTableViewCell.swift */; };
+		9CB8D62C1C8BBD13007F39D4 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D62A1C8BBD13007F39D4 /* ActivityTableViewCell.xib */; };
+		9CB8D62E1C8BCEA9007F39D4 /* slack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D62D1C8BCEA9007F39D4 /* slack.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		9CB8D6181C8B6BD6007F39D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CB8D61B1C8B6BD6007F39D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CB8D61D1C8B6BD6007F39D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CB8D6251C8B9368007F39D4 /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
+		9CB8D6291C8BBD13007F39D4 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		9CB8D62A1C8BBD13007F39D4 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
+		9CB8D62D1C8BCEA9007F39D4 /* slack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = slack.jpg; path = ../../../../../../Desktop/slack.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,13 @@
 				9CB8D6111C8B6BD6007F39D4 /* AppDelegate.swift */,
 				9CB8D6131C8B6BD6007F39D4 /* ListViewController.swift */,
 				9CB8D6151C8B6BD6007F39D4 /* Main.storyboard */,
+				9CB8D6291C8BBD13007F39D4 /* ActivityTableViewCell.swift */,
+				9CB8D62A1C8BBD13007F39D4 /* ActivityTableViewCell.xib */,
+				9CB8D6251C8B9368007F39D4 /* test.storyboard */,
 				9CB8D6181C8B6BD6007F39D4 /* Assets.xcassets */,
 				9CB8D61A1C8B6BD6007F39D4 /* LaunchScreen.storyboard */,
 				9CB8D61D1C8B6BD6007F39D4 /* Info.plist */,
+				9CB8D62D1C8BCEA9007F39D4 /* slack.jpg */,
 			);
 			path = KnackApp;
 			sourceTree = "<group>";
@@ -124,6 +136,9 @@
 			files = (
 				9CB8D61C1C8B6BD6007F39D4 /* LaunchScreen.storyboard in Resources */,
 				9CB8D6191C8B6BD6007F39D4 /* Assets.xcassets in Resources */,
+				9CB8D62C1C8BBD13007F39D4 /* ActivityTableViewCell.xib in Resources */,
+				9CB8D6261C8B9368007F39D4 /* test.storyboard in Resources */,
+				9CB8D62E1C8BCEA9007F39D4 /* slack.jpg in Resources */,
 				9CB8D6171C8B6BD6007F39D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +152,7 @@
 			files = (
 				9CB8D6141C8B6BD6007F39D4 /* ListViewController.swift in Sources */,
 				9CB8D6121C8B6BD6007F39D4 /* AppDelegate.swift in Sources */,
+				9CB8D62B1C8BBD13007F39D4 /* ActivityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +300,7 @@
 				9CB8D6221C8B6BD6007F39D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
