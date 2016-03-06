@@ -16,6 +16,10 @@
 		9CB8D62B1C8BBD13007F39D4 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D6291C8BBD13007F39D4 /* ActivityTableViewCell.swift */; };
 		9CB8D62C1C8BBD13007F39D4 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D62A1C8BBD13007F39D4 /* ActivityTableViewCell.xib */; };
 		9CB8D62E1C8BCEA9007F39D4 /* slack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CB8D62D1C8BCEA9007F39D4 /* slack.jpg */; };
+		9CB8D6301C8BD92A007F39D4 /* ProfileMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D62F1C8BD92A007F39D4 /* ProfileMainViewController.swift */; };
+		9CB8D6341C8BE99D007F39D4 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D6331C8BE99D007F39D4 /* TransitionManager.swift */; };
+		9CB8D6361C8BFE09007F39D4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D6351C8BFE09007F39D4 /* TableViewCell.swift */; };
+		9CB8D6381C8C0A30007F39D4 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB8D6371C8C0A30007F39D4 /* ActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		9CB8D6291C8BBD13007F39D4 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		9CB8D62A1C8BBD13007F39D4 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
 		9CB8D62D1C8BCEA9007F39D4 /* slack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = slack.jpg; path = ../../../../../../Desktop/slack.jpg; sourceTree = "<group>"; };
+		9CB8D62F1C8BD92A007F39D4 /* ProfileMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMainViewController.swift; sourceTree = "<group>"; };
+		9CB8D6331C8BE99D007F39D4 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		9CB8D6351C8BFE09007F39D4 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9CB8D6371C8C0A30007F39D4 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,10 @@
 				9CB8D6111C8B6BD6007F39D4 /* AppDelegate.swift */,
 				9CB8D6131C8B6BD6007F39D4 /* ListViewController.swift */,
 				9CB8D6151C8B6BD6007F39D4 /* Main.storyboard */,
+				9CB8D6371C8C0A30007F39D4 /* ActivityViewController.swift */,
+				9CB8D6351C8BFE09007F39D4 /* TableViewCell.swift */,
+				9CB8D6331C8BE99D007F39D4 /* TransitionManager.swift */,
+				9CB8D62F1C8BD92A007F39D4 /* ProfileMainViewController.swift */,
 				9CB8D6291C8BBD13007F39D4 /* ActivityTableViewCell.swift */,
 				9CB8D62A1C8BBD13007F39D4 /* ActivityTableViewCell.xib */,
 				9CB8D6251C8B9368007F39D4 /* test.storyboard */,
@@ -150,7 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB8D6341C8BE99D007F39D4 /* TransitionManager.swift in Sources */,
 				9CB8D6141C8B6BD6007F39D4 /* ListViewController.swift in Sources */,
+				9CB8D6301C8BD92A007F39D4 /* ProfileMainViewController.swift in Sources */,
+				9CB8D6361C8BFE09007F39D4 /* TableViewCell.swift in Sources */,
+				9CB8D6381C8C0A30007F39D4 /* ActivityViewController.swift in Sources */,
 				9CB8D6121C8B6BD6007F39D4 /* AppDelegate.swift in Sources */,
 				9CB8D62B1C8BBD13007F39D4 /* ActivityTableViewCell.swift in Sources */,
 			);

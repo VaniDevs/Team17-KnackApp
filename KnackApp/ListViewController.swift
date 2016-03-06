@@ -69,14 +69,19 @@ class Activity: NSObject {
 class ListViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var navBarTitle: UINavigationItem!
     
     var activityList = List()
-
+    let transitionManager = TransitionManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib:UINib = UINib(nibName: "ActivityTableViewCell", bundle: NSBundle.mainBundle())        
-        self.tableView.registerNib(nib, forCellReuseIdentifier: "Cell")
+        if openWorkshop {
+            navBarTitle.title = "Workshops"
+        } else {
+            navBarTitle.title = "Tasks"
+        }
         
         let url = NSURL(string: "https://quiet-temple-44406.herokuapp.com/activities")!
         
@@ -104,25 +109,52 @@ class ListViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return activityList.workshop.count
+        
+        return openWorkshop ? activityList.workshop.count : activityList.tasks.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-//        guard let cell = tableView.dequeueReusableCellWithIdentifier("Cell") else {return UITableViewCell()}
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! TableViewCell
         
-          let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! ActivityTableViewCell
-        
-        cell.organizationName.text = activityList.workshop[indexPath.row].name
+        if openWorkshop {
+            cell.orgName.text = activityList.workshop[indexPath.row].name
+            cell.address.text = "4911 W Road, Vancouver, BC"
+        } else {
+            cell.address.text = "4911 W Road, Vancouver, BC"
+            cell.orgName.text = activityList.tasks[indexPath.row].name
+        }
         
         return cell
     }
     
-    //-------Actions----
-
-    @IBAction func showTasks(sender: AnyObject) {
-        print("Reload table")
-        tableView.reloadData()
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let activityView = sb.instantiateViewControllerWithIdentifier("activity")
+        as! ActivityViewController
+        //Pass info
+        activityView.test = "Test"
+        activityView.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
+        self.presentViewController(activityView, animated: true, completion: nil)
+        
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "back"{
+            openWorkshop = !openWorkshop
+        
+            // this gets a reference to the screen that we're about to transition to
+            let toViewController = segue.destinationViewController as UIViewController
+        
+            // instead of using the default transition animation, we'll ask
+            // the segue to use our custom TransitionManager object to manage the transition animation
+            toViewController.transitioningDelegate = self.transitionManager
+        }
+        
+        
+        
     }
     
     //-------Defaults-----------
